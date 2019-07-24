@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <Import Project="..\..\build\sign.props" />
+  <Import Project="..\..\build\version.props" />
+  <Import Project="..\..\build\plugins.props" />
+
+  <PropertyGroup>
+    <Description>Microsoft.IIS.Administration.Certificates Class Library</Description>
+    <VersionPrefix>$(IISAdministrationVersion)</VersionPrefix>
+    <Authors>Microsoft</Authors>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <AssemblyName>Microsoft.IIS.Administration.Certificates</AssemblyName>
+    <PackageId>Microsoft.IIS.Administration.Certificates</PackageId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Microsoft.IIS.Administration.Files\Microsoft.IIS.Administration.Files.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MicroBuild.Core" Version="$(MicroBuildCoreVersion)">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="System.Security.Cryptography.X509Certificates" Version="$(SystemSecurityCryptographyX509CertificatesVersion)" />
+  </ItemGroup>
+
+</Project>

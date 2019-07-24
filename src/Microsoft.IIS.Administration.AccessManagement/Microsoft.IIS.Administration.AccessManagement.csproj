@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <Import Project="..\..\build\sign.props" />
+  <Import Project="..\..\build\version.props" />
+  <Import Project="..\..\build\plugins.props" />
+
+  <PropertyGroup>
+    <Description>Microsoft.IIS.Administration.AccessManagement</Description>
+    <VersionPrefix>$(IISAdministrationVersion)</VersionPrefix>
+    <Authors>Microsoft</Authors>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <AssemblyName>Microsoft.IIS.Administration.AccessManagement</AssemblyName>
+    <PackageId>Microsoft.IIS.Administration.AccessManagement</PackageId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MicroBuild.Core" Version="$(MicroBuildCoreVersion)">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Microsoft.IIS.Administration.Core\Microsoft.IIS.Administration.Core.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <Import Project="..\..\build\sign.props" />
+  <Import Project="..\..\build\version.props" />
+  <Import Project="..\..\build\plugins.props" />
+
+  <PropertyGroup>
+    <Description>Microsoft.IIS.Administration.Files Class Library</Description>
+    <VersionPrefix>$(IISAdministrationVersion)</VersionPrefix>
+    <Authors>Microsoft</Authors>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <AssemblyName>Microsoft.IIS.Administration.Files</AssemblyName>
+    <PackageId>Microsoft.IIS.Administration.Files</PackageId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Microsoft.IIS.Administration.Files.Core\Microsoft.IIS.Administration.Files.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MicroBuild.Core" Version="$(MicroBuildCoreVersion)">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="$(MicrosoftAspNetCoreStaticFilesVersion)" />
+  </ItemGroup>
+
+</Project>
